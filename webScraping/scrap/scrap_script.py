@@ -54,15 +54,6 @@ for city in cities:
         link = item.find('a', class_='projectTuple__projectName projectTuple__pdWrap20 ellipsis')['href']
 
         # Save the scraped data to MongoDB
-        property_data = {
-            "name": name,
-            "cost": cost,
-            "property_type": p_type,
-            "locality": locality,
-            "area": area,
-            "city": city,
-            "link": link,
-        }
         print(property_data)
         insertPropertyDetails(name, cost, p_type, locality, area, city, link)
 
