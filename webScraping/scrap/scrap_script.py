@@ -52,9 +52,9 @@ for city in cities:
         locality = item.find('h2', class_='projectTuple__subHeadingWrap body_med ellipsis').text.strip()
         area = item.find('span', class_='caption_subdued_medium configurationCards__cardAreaSubHeadingOne').text.strip()
         link = item.find('a', class_='projectTuple__projectName projectTuple__pdWrap20 ellipsis')['href']
-
-        # Save the scraped data to MongoDB
+         #Shows in terminal
         print(property_data)
+         #Save the scraped data to MongoDB
         insertPropertyDetails(name, cost, p_type, locality, area, city, link)
 
 # Close the WebDriver
